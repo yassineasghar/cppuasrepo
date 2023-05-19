@@ -10,7 +10,7 @@ private:
 public:
     Pkw();
     Pkw(const char *m = "Mercedes", unsigned long f = 0, unsigned int l = 100);
-    //~Pkw();
+   
     const char* getMarke() const;
     void setMarke(const char *m);
     unsigned long getFgstnr() const;

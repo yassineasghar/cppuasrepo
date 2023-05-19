@@ -2,16 +2,17 @@
 #include <cstring>
 #include "pkw.h"
 
+using namespace std;
 Pkw::Pkw(const char *m, unsigned long f, unsigned int l) {
     marke = new char[strlen(m) + 1];
     strcpy(marke, m);
     fgstnr = f;
     leistung = l;
-    std::cout << "Pkw der Marke " << marke << " mit Fahrgestellnummer " << fgstnr
-              << " und Leistung " << leistung << " erzeugt." << std::endl;
+    cout << "Pkw der Marke " << marke << " mit Fahrgestellnummer " << fgstnr
+              << " und Leistung " << leistung << " erzeugt." << endl;
 }
 
-Pkw::~Pkw() {
+Pkw::Pkw() {
     delete[] marke;
 }
 
