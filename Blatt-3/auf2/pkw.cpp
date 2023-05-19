@@ -12,7 +12,7 @@ Pkw::Pkw(const char *m, unsigned long f, unsigned int l) {
               << " und Leistung " << leistung << " erzeugt." << endl;
 }
 
-Pkw::Pkw() {
+Pkw::~Pkw() {
     delete[] marke;
 }
 

@@ -8,7 +8,7 @@ private:
     unsigned int leistung;
 
 public:
-    Pkw();
+    ~Pkw();
     Pkw(const char *m = "Mercedes", unsigned long f = 0, unsigned int l = 100);
    
     const char* getMarke() const;
