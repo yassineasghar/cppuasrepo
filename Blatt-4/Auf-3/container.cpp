@@ -3,26 +3,25 @@
 #include <string>
 using namespace std;
 
-struct paar {
+struct paar{
     string word;
     int count;
-};
+        };
 
 int main() {
     vector<paar> wordCount;
 
     string input;
-    cout << "Geben Sie den Text ein: ";
+    cout << "[INPUT]:\t";
     getline(cin, input);
 
-    // Aufteilen des Eingabetextes in einzelne Wörter
     string delimiter = " ";
     size_t pos = 0;
     string token;
     while ((pos = input.find(delimiter)) != string::npos) {
         token = input.substr(0, pos);
 
-        // a Check for the word existence in the vector 
+        // a Check for the word existence in the wordCount vector 
         bool wordExists = false;
         for (auto& p : wordCount) {
             if (p.word == token) {
@@ -32,7 +31,7 @@ int main() {
             }
         }
 
-        // When teh word NOT in vector --> generate new 
+        // When the word NOT in vector --> loadthe existing one 
         if (!wordExists) {
             paar newPair;
             newPair.word = token;
@@ -63,8 +62,11 @@ int main() {
 
     // print word len
     for (const auto& p : wordCount) {
-        cout << p.word << ": " << p.count << endl;
+        cout <<"[WORD]" << p.word << ": " << p.count << endl;
     }
 
     return 0;
 }
+
+// Test Case : 
+// aa  bb bb aa aa bb aa aa
