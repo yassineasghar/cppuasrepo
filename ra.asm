@@ -52,3 +52,10 @@ count :
 	j start 
 	
 	
+# auf 9-2 
+
+.text 
+		addi $8,$0,-1		# 2008ffff
+		sllv $8,$8,$5		# 00a84004	
+		and $2,$4,$8		# 00881024
+		jr $31			# 03e00008
